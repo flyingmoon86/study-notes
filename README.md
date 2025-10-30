@@ -89,3 +89,14 @@ All notes are organized by topic and written for clarity and long-term review.
 - **SSH**：适合持续开发、频繁同步代码，尤其是在网络可能不稳定的环境下。  
 
 > ⚡ Tip：我们在本仓库已将远程仓库改为 **SSH** 方式，保证长期 push/pull 的稳定性。
+## 🔑 SSH Key 与 GitHub 仓库关系示意
+
+下面展示了 SSH Key、电脑、GitHub 账户和多个仓库之间的关系：
+
+
+### 🔹 说明
+1. **电脑**：私钥保存在本地，用于 SSH 连接 GitHub。  
+2. **GitHub 账户**：公钥添加在账户里，一旦认证通过，可访问该账户下所有仓库。  
+3. **仓库权限**：
+   - ✅ 有权限：可以 clone/pull/push  
+   - ❌ 无权限：即使有 SSH key，也无法操作  
