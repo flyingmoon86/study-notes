@@ -74,4 +74,4 @@ All notes are organized by topic and written for clarity and long-term review.
 ## 🚀 How to Use
 Clone the repository:
 ```bash
-git clone https://github.com/yourname/algorithms-notes.git
+git clone https://github.com/flyingmoon86/study-notes.git
