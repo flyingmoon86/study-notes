@@ -1,0 +1,46 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "C++: Build Active File",
+			"type": "shell",
+			"command": "C:/Users/gbg61/mingw64/bin/g++.EXE",
+			"args": [
+				"-Wall",
+				"-Wextra",
+				"-g3",
+				"${file}",
+				"-o",
+				"${fileDirname}/output/${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "C++: Build & Run Active File (no cd)",
+			"type": "shell",
+			"command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& 'C:/Users/gbg61/mingw64/bin/g++.EXE' -Wall -Wextra -g3 '${file}' -o '${fileDirname}/output/${fileBasenameNoExtension}.exe' ; & '${fileDirname}/output/${fileBasenameNoExtension}.exe'\"",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Temp: Build & Run Active (no cd)",
+			"type": "shell",
+			"command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& 'C:/Users/gbg61/mingw64/bin/g++.EXE' -Wall -Wextra -g3 '${file}' -o '${fileDirname}/output/${fileBasenameNoExtension}.exe' ; & '${fileDirname}/output/${fileBasenameNoExtension}.exe'\"",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}
