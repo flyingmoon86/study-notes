@@ -1,8 +1,6 @@
 {
     "files.associations": {
-        "*.cpp": "cpp",
-        "*.cc": "cpp",
-        "*.cxx": "cpp"
+        "*.cpp": "cpp"
     }
 
 }
