@@ -21,10 +21,12 @@ LCS (Longest Common Subsequence) 最长公共子序列
 int lcs_two_rows(const string& A, const string& B) {
     int n = A.size(), m = B.size();
     if (n < m) return lcs_two_rows(B, A);          // 保证 m 是较短串
-    vector<int> pre(m + 1, 0), cur(m + 1, 0);      // pre = dp[i-1][*], cur = dp[i][*]
+    vector<int> pre(m + 1, 0), cur(m + 1, 0);
+    cur[0]=0;
+    pre[0]=0;      // pre = dp[i-1][*], cur = dp[i][*]
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= m; ++j) {
-            if (A[i - 1] == B[j - 1])
+            if (A[i-1] == B[j-1])
                 cur[j] = pre[j - 1] + 1;
             else
                 cur[j] = max(cur[j - 1], pre[j]);
