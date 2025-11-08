@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Temp: compile matix_production",
+			"type": "shell",
+			"command": "C:/Users/gbg61/mingw64/bin/g++.EXE -Wall -Wextra -g3 \"c:\\Users\\gbg61\\Desktop\\algorithms-notes\\05_Dynamic_Programming\\matix_production.cpp\" -o \"c:\\Users\\gbg61\\Desktop\\algorithms-notes\\05_Dynamic_Programming\\output\\matix_production.exe\"",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}
