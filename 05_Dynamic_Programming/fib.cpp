@@ -8,11 +8,11 @@ using namespace std;
 // Top-Down 记忆化：O(n) 时间，O(n) 空间
 long long fib_topdown(int n, vector<long long>& memo) {
     if(n <= 1) return n;
-    if(memo[n] != -1) return memo[n];//直接返回已计算结果
+    if(memo[n] != -1) return memo[n];//已计算
     return memo[n] = fib_topdown(n-1, memo) + fib_topdown(n-2, memo);
 }
 
-// Bottom-Up 空间优化：O(n) 时间，O(1) 额外空间
+// Bottom-Up 空间优化：O(n) 时间，O(1) 额外空间,非递归
 long long fib_bottomup_space_opt(int n) {
     if(n <= 1) return n;
     long long a = 0, b = 1; // F(0), F(1)
