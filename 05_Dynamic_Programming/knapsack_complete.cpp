@@ -27,7 +27,7 @@ int main() {
     cin.tie(nullptr);
 
     int n, W;
-    if(!(cin >> n >> W)) return 0;
+    if(!(cin >> W >> n)) return 0;
 
     vector<int> w(n), v(n);
     for (int i = 0; i < n; ++i) cin >> w[i] >> v[i];
